@@ -28,7 +28,7 @@ while True:
 
     # Inicializar o driver do Chrome
     driver = webdriver.Chrome(executable_path="C:\\Users\\pablo\\Downloads\\ChromeDriver\\chromedriver.exe", options=chrome_options)
-    driver.get("https://intranet.fucape.br/webapp/public/autenticacao?tipoUsuario=1")
+    driver.get("https://intranet")
 
     # Localizar o campo de login e preencher
     login_field = driver.find_element_by_name("login")
@@ -44,7 +44,7 @@ while True:
     time.sleep(5)
 
     # Fazer a requisição para a API com as credenciais autenticadas
-    url = "https://intranet.fucape.br/webapp/api/boletim/disciplinas?anoLetivo=2023&periodoLetivo=1"
+    url = "https://intranet"
     cookies = driver.get_cookies()
     session = requests.Session()
 
